@@ -1,19 +1,24 @@
 programa {
   funcao inicio() {
-    inteiro x, tentativa
-    escreva("Informe o número secreto\n")
+    inteiro x, tentativa, n_tent
+    cadeia mensagem
+    mensagem="Tentativas esgotadas"
+    n_tent=0
+    escreva("Informe o nÃºmero secreto\n")
     leia(x)
     limpa()
-    escreva("Informe uma tentativa\n")
-    leia(tentativa)
-    enquanto(tentativa<x){
-      escreva("Digite um número maior\n")
+    escreva("Tente adivinhar o nÃºmero secreto\n")
+    enquanto(n_tent<5){
       leia(tentativa)
-    }enquanto(tentativa>x){
-      escreva("Digite um número menor\n")
-      leia(tentativa)
-    }se(tentativa==x){
-      escreva("Você acertou!")
-    }
+      se(tentativa==x){
+        mensagem="VocÃª acertou!"
+        pare
+      }senao se(tentativa<x){
+        escreva("Tente um nÃºmero maior\n")
+      }senao{
+        escreva("Tente um nÃºmero menor\n")
+      }
+      n_tent=n_tent+1
+    }escreva(mensagem)
   }
 }
