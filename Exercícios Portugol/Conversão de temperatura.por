@@ -1,4 +1,5 @@
 programa {
+  inclua biblioteca Matematica --> mat
   funcao inicio() {
     caracter opcao
     real temp, resultado
@@ -8,37 +9,37 @@ programa {
       escreva("Informe a temperatura em Celsius:\n")
       leia(temp)
       resultado = (temp*1.8)+32
-      escreva("A temperatura em Fahrenheit é "+resultado+"°F.")
+      escreva("A temperatura em Fahrenheit é "+mat.arredondar(resultado,2)+"°F.")
     }
     senao se(opcao == 2){
       escreva("Informe a temperatura em Fahrenheit:\n")
       leia(temp)
       resultado = (temp-32)*(5/9)
-      escreva("A temperatura em Celsius é "+resultado+"°C.")
+      escreva("A temperatura em Celsius é "+mat.arredondar(resultado,2)+"°C.")
     }
     senao se(opcao == 3){
       escreva("Informe a temperatura em Celsius:\n")
       leia(temp)
       resultado = temp+273.15
-      escreva("A temperatura em Kelvin é "+resultado+"°K.")
+      escreva("A temperatura em Kelvin é "+mat.arredondar(resultado,2)+"°K.")
     }
     senao se(opcao == 4){
       escreva("Informe a temperatura em Kelvin:\n")
       leia(temp)
       resultado = temp-273.15
-      escreva("A temperatura em Celsius é "+resultado+"°C.")
+      escreva("A temperatura em Celsius é "+mat.arredondar(resultado,2)+"°C.")
     }
     senao se(opcao == 5){
       escreva("Informe a temperatura em Fahrenheit:\n")
       leia(temp)
       resultado = (temp+459.67)*5/9
-      escreva("A temperatura em Kelvin é "+resultado+"°K.")
+      escreva("A temperatura em Kelvin é "+mat.arredondar(resultado,2)+"°K.")
     }
     senao se(opcao == 6){
       escreva("Informe a temperatura em Kelvin:\n")
       leia(temp)
       resultado = (temp-273.15)*(9/5)+32
-      escreva("A temperatura em Fahrenheit é "+resultado+"°F.")
+      escreva("A temperatura em Fahrenheit é "+mat.arredondar(resultado,2)+"°F.")
     }
     senao{
       escreva("Opção inválida. Encerrando sistema.")
