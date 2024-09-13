@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖Site Teste💖</title>
+</head>
+<body style="text-align:center">
+    <h1>Uma vez tigresa🐅</h1>
+    <p>Corpo do texto, nhew</p>
+    <label for="nome">Nome:</label>
+    <input id="nome" type="text" placeholder="Ex.: Jaguatirica"><br><br>
+    <button onclick="boasVindas()">Clique aqui</button><br><br>
+    <button onclick="parOuImpar()">Par ou Impar</button><br><br>
+    <button onclick="calculoVolume()">Cálculo de Volume</button><br><br>
+    <button onclick="multaPesca()">Multa de Pesca</button><br><br>
+    <button onclick="mediaPonderada()">Cálculo de Média Ponderada</button><br><br>
+    <button onclick="conversaoTemperatura()">Conversão de Temperatura</button><br><br>
+    <script>
+        function boasVindas(){
+            let nome = document.getElementById("nome").value;
+            let ano = prompt("Bem vindo, "+nome+"! Digite seu ano de nascimento!");
+            if(2024- ano > 17){
+                alert("Você é maior de idade, pois você tem "+(2024-ano)+" anos.");
+            }else{
+                alert("Você é menor de idade, pois você tem "+(2024-ano)+" anos.");
+            }
+        }
+        function parOuImpar(){
+            let n = prompt("Escreva um número");
+            if(n%2==0){
+                alert("O número é par!");
+            }else{
+                alert("O número é ímpar!");
+            }
+        }
+        function calculoVolume(){
+            let alt = prompt("Informe o valor da altura:");
+            let larg = prompt("Informe o valor da largura:");
+            let comp = prompt("Informe o valor do comprimento:");
+            vol = alt * larg * comp
+            alert("O valor do volume é "+vol)
+        }
+        function multaPesca(){
+            let permitido = prompt("Informe o peso permitido:");
+            let pescado = prompt("Informe o peso pescado:");
+            if(pescado>permitido){
+                let valorMulta = prompt("Informe o valor da multa por peso:");
+                dif = pescado - permitido
+                multa = dif * valorMulta
+                alert("O peso excedeu em "+dif+"kg o limite permitido, deve-se pagar uma multa de R$"+multa+".")
+            }else{
+                alert("O peso está dentro do limite permitido. Não é necessário pagar multa.")
+            }
+        }
+        function mediaPonderada(){
+            let qtdAtv = prompt("Informe a quantidade de atividades que deseja calcular:");
+            let mediaAprov = prompt("Informe a média necessária para aprovação.");
+            media=0
+            totalPeso=0
+            qtdCad=0
+            while(qtdCad<qtdAtv){
+                let atv = Number( prompt("Informe a nota da atividade:"));
+                let peso = Number( prompt("Informe o peso da atividade:"));
+                totalPeso = totalPeso + peso
+                media = media + (atv * peso)
+                qtdCad = qtdCad + 1
+            }
+            media=media/totalPeso
+            if(media >= mediaAprov){
+                alert("A nota final é "+media+", portanto o aluno foi aprovado.");
+            }else if(mediaAprov - media <= 0.5){
+                alert("A nota final é "+media+", portanto o aluno foi aprovado por conselho.")
+            }else{
+                alert("A nota final é "+media+", portanto o aluno foi reprovado.")
+            }
+        }
+        function conversaoTemperatura(){
+            let opcao = prompt("Qual conversão você deseja fazer?\n1- Celsius para Fahrenheit\n2- Fahrenheit para Celsius\n3- Celsius para Kelvin\n4- Kelvin para Celsius\n5- Fahrenheit para Kelvin\n6- Kelvin para Fahrenheit");
+            if(opcao==1){
+                let temp = Number(prompt("Informe a temperatura em Celsius:"));
+                resultado = (temp*1.8)+32
+                alert("A temperatura em Fahrenheit é "+resultado+"°F.");
+            }else if(opcao==2){
+                let temp = Number(prompt("Informe a temperatura em Fahrenheit:"));
+                resultado = (temp-32)*(5/9)
+                alert("A temperatura em Celsius é "+resultado+"°C.");
+            }else if(opcao==3){
+                let temp = Number(prompt("Informe a temperatura em Celsius:"));
+                resultado = temp+273.15
+                alert("A temperatura em Kelvin é "+resultado+"°K.");
+            }else if(opcao==4){
+                let temp = Number(prompt("Informe a temperatura em Kelvin:"));
+                resultado = temp-273.15
+                alert("A temperatura em Celsius é "+resultado+"°C.");
+            }else if(opcao==5){
+                let temp = Number(prompt("Informe a temperatura em Fahrenheit:"));
+                resultado = (temp+459.67)*5/9
+                alert("A temperatura em Kelvin é "+resultado+"°K.");
+            }else if(opcao==6){
+                let temp = Number(prompt("Informe a temperatura em Kelvin:"));
+                resultado = (temp-273.15)*(9/5)+32
+                alert("A temperatura em Fahrenheit é "+resultado+"°F.");
+            }else{
+                alert("Opção inválida. Encerrando sistema.")
+            }
+        }
+    </script>
+</body>
+</html>
