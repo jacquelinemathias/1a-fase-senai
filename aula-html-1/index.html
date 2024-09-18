@@ -54,26 +54,29 @@
             }
         }
         function mediaPonderada(){
-            let qtdAtv = prompt("Informe a quantidade de atividades que deseja calcular:");
-            let mediaAprov = prompt("Informe a média necessária para aprovação.");
-            media=0
-            totalPeso=0
-            qtdCad=0
-            while(qtdCad<qtdAtv){
-                let atv = Number( prompt("Informe a nota da atividade:"));
-                let peso = Number( prompt("Informe o peso da atividade:"));
-                totalPeso = totalPeso + peso
-                media = media + (atv * peso)
-                qtdCad = qtdCad + 1
-            }
-            media=media/totalPeso
-            if(media >= mediaAprov){
-                alert("A nota final é "+media+", portanto o aluno foi aprovado.");
-            }else if(mediaAprov - media <= 0.5){
-                alert("A nota final é "+media+", portanto o aluno foi aprovado por conselho.")
-            }else{
-                alert("A nota final é "+media+", portanto o aluno foi reprovado.")
-            }
+            // window.location.href = "link" (nova janela)
+            window.open("mediasystem.html") // (nova aba)
+            // *funcao movida para mediasystem.js*
+            // let qtdAtv = prompt("Informe a quantidade de atividades que deseja calcular:");
+            // let mediaAprov = prompt("Informe a média necessária para aprovação.");
+            // media=0
+            // totalPeso=0
+            // qtdCad=0
+            // while(qtdCad<qtdAtv){
+            //     let atv = Number( prompt("Informe a nota da atividade:"));
+            //     let peso = Number( prompt("Informe o peso da atividade:"));
+            //     totalPeso = totalPeso + peso
+            //     media = media + (atv * peso)
+            //     qtdCad = qtdCad + 1
+            // }
+            // media=media/totalPeso
+            // if(media >= mediaAprov){
+            //     alert("A nota final é "+media+", portanto o aluno foi aprovado.");
+            // }else if(mediaAprov - media <= 0.5){
+            //     alert("A nota final é "+media+", portanto o aluno foi aprovado por conselho.")
+            // }else{
+            //     alert("A nota final é "+media+", portanto o aluno foi reprovado.")
+            // }
         }
         function conversaoTemperatura(){
             let opcao = prompt("Qual conversão você deseja fazer?\n1- Celsius para Fahrenheit\n2- Fahrenheit para Celsius\n3- Celsius para Kelvin\n4- Kelvin para Celsius\n5- Fahrenheit para Kelvin\n6- Kelvin para Fahrenheit");
