@@ -44,13 +44,13 @@ function executar1038(){
 function executar1115(){
     let X = Number(prompt("Informe o valor da coordenada X:"));
     let Y = Number(prompt("Informe o valor da coordenada Y"));
-    if(X>0, Y>0){
+    if(X>0 && Y>0){
         alert("Primeiro quadrante.");
-    }else if(X>0, Y<0){
+    }else if(X>0 && Y<0){
         alert("Quarto quadrante.");
-    }else if(X<0, Y<0){
+    }else if(X<0 && Y<0){
         alert("Terceiro quadrante.");
-    }else if(X<0, Y>0){
+    }else if(X<0 && Y>0){
         alert("Segundo quadrante.");
     }
 }
