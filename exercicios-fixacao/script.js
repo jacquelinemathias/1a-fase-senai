@@ -93,9 +93,28 @@ function verMult(){
     }
 }
 
-function verPrimos(){
-    let n1 = Number(prompt("Informe um número:"));
-    for(n1%n1==0; n1%1==n1;){
-        alert("O número "+n1+" é primo.")
+function primos(i){
+    let qtdDivisores = 0;
+    for(let ant=1; ant<=i; ant++){
+        if(i%ant==0){
+            qtdDivisores++;
+        }
     }
+    if(qtdDivisores==2){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function verPrimos(){
+    let n = Number(prompt("Digite um número:"));
+    let armazenamento=""
+    for(let i=1; i<=n; i++){
+        if(primos(i)==true){
+            armazenamento += (i+" é um número primo.\n");
+        }else{
+            armazenamento += (i+" não é um número primo.\n");
+        }
+    }alert(armazenamento)
 }
