@@ -1,3 +1,34 @@
+function executar1142(){
+    let linha = Number(prompt("Quantos números você deseja listar?"));
+    let contagem = 0
+    let contador = 1
+    let armazenamento = ''
+    while(contagem<linha){
+        if(contador%4!=0){
+            console.log(contador);
+            armazenamento += contador + ' '
+        }else{
+            console.log("PUM");
+            contagem++
+            armazenamento += "PUM\n"
+        }contador++
+    }alert(armazenamento)
+}
+
+function executar1115(){
+    let X = Number(prompt("Informe o valor da coordenada X:"));
+    let Y = Number(prompt("Informe o valor da coordenada Y"));
+    if(X>0 && Y>0){
+        alert("Primeiro quadrante.");
+    }else if(X>0 && Y<0){
+        alert("Quarto quadrante.");
+    }else if(X<0 && Y<0){
+        alert("Terceiro quadrante.");
+    }else if(X<0 && Y>0){
+        alert("Segundo quadrante.");
+    }
+}
+
 function executar1050(){
     let ddd = Number(prompt("Informe seu DDD:"));
     if(ddd==61){
@@ -39,20 +70,6 @@ function executar1038(){
         alert("Até a próxima!");
     }preco = pagamento * qtdLanche
     alert("O valor da sua compra é R$"+preco.toFixed(2))
-}
-
-function executar1115(){
-    let X = Number(prompt("Informe o valor da coordenada X:"));
-    let Y = Number(prompt("Informe o valor da coordenada Y"));
-    if(X>0 && Y>0){
-        alert("Primeiro quadrante.");
-    }else if(X>0 && Y<0){
-        alert("Quarto quadrante.");
-    }else if(X<0 && Y<0){
-        alert("Terceiro quadrante.");
-    }else if(X<0 && Y>0){
-        alert("Segundo quadrante.");
-    }
 }
 
 // PRECISO ARRUMAR!
