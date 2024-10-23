@@ -26,11 +26,31 @@ body{
     border-radius: 10px;
     background-color: rgb(255, 247, 241);
 }
+.update{
+    border-style: groove;
+    width: 30vw;
+    border-radius: 10px;
+    background-color: rgb(255, 247, 241);
+}
+.delete{
+    border-style: groove;
+    width: 30vw;
+    border-radius: 10px;
+    background-color: rgb(255, 247, 241);
+}
 #adiciona{
     background-color: rgb(255, 185, 255);
     border-radius: 7px;
 }
 #logar{
+    background-color: rgb(255, 185, 255);
+    border-radius: 7px;
+}
+#atualiza{
+    background-color: rgb(255, 185, 255);
+    border-radius: 7px;
+}
+#exclui{
     background-color: rgb(255, 185, 255);
     border-radius: 7px;
 }
