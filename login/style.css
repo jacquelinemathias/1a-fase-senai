@@ -5,7 +5,7 @@ body{
     flex-direction: column;
 }
 .container{
-    /* text-align: center; */
+    text-align: center;
     border-style: double;
     width: 40vw;
     display: flex;
