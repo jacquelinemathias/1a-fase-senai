@@ -1,0 +1,35 @@
+body{
+    text-align: center;
+    background-color: rgb(238, 221, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section{
+    border-radius: 15px;
+    border-style: groove;
+    background-color: rgb(224, 190, 255);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    width: 30%;
+    height: 3vh;
+    border-radius: 15px;
+    border-style: groove;
+}
+
+button{
+    width: 30%;
+    background-color: rgb(162, 255, 190);
+    border-radius: 15px;
+    border-style: groove;
+}
+
+button:hover{
+    background-color: rgb(124, 255, 163);
+}
